@@ -493,8 +493,9 @@ function HRTodosSummaryController($scope, $window, $timeout, $interval, spUtil, 
         // Optimistic update
         todo.state = getOptimisticState(action);
 
+        var timedOut = false;
         var timeoutPromise = $timeout(function() {
-            return $q.reject('Request timeout');
+            timedOut = true;
         }, CONSTANTS.ACTION_TIMEOUT);
 
         var requestPromise = ctrl.server.update({
@@ -503,18 +504,28 @@ function HRTodosSummaryController($scope, $window, $timeout, $interval, spUtil, 
             actionType: action
         });
 
-        return $q.race([requestPromise, timeoutPromise]).then(
+        return requestPromise.then(
             function(response) {
                 $timeout.cancel(timeoutPromise);
 
                 if (response.data && response.data.success) {
                     spUtil.addInfoMessage(response.data.message || 'Action completed successfully');
                     removeTodoFromList(todo.sysId);
+
+                    // Cleanup
+                    delete activeRequests[requestKey];
+                    todo.isProcessing = false;
+
                     return response;
                 } else {
                     // Rollback
                     angular.extend(todo, originalState);
                     spUtil.addErrorMessage(response.data.message || 'Action failed');
+
+                    // Cleanup
+                    delete activeRequests[requestKey];
+                    todo.isProcessing = false;
+
                     return $q.reject(response.data.message);
                 }
             },
@@ -523,12 +534,14 @@ function HRTodosSummaryController($scope, $window, $timeout, $interval, spUtil, 
                 // Rollback
                 angular.extend(todo, originalState);
                 handleError('Action failed', error, 'Failed to perform action');
+
+                // Cleanup
+                delete activeRequests[requestKey];
+                todo.isProcessing = false;
+
                 return $q.reject(error);
             }
-        ).finally(function() {
-            delete activeRequests[requestKey];
-            todo.isProcessing = false;
-        });
+        );
     }
 
     function getOptimisticState(action) {
