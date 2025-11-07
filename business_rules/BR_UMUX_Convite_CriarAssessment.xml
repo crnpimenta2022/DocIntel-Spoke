@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_snc_pmprod_convite</collection>
+        <condition/>
+        <description>Cria Assessment Instance usando API oficial AssessmentUtils quando um convite UMUX é criado</description>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>BR_UMUX_Convite_CriarAssessment</name>
+        <order>200</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+    'use strict';
+
+    try {
+        // Verificar se já tem Assessment Instance (evitar duplicação)
+        if (current.getValue('assessment_instance')) {
+            gs.debug('BR_UMUX_Convite_CriarAssessment: Convite já possui Assessment Instance, ignorando');
+            return;
+        }
+
+        // Buscar a pesquisa relacionada
+        var pesquisaGR = current.pesquisa.getRefRecord();
+        if (!pesquisaGR || !pesquisaGR.isValidRecord()) {
+            gs.error('BR_UMUX_Convite_CriarAssessment: Pesquisa inválida para convite ' + current.getUniqueValue());
+            return;
+        }
+
+        // Validar que é uma pesquisa UMUX ativa
+        if (pesquisaGR.getValue('tipo') !== 'UMUX' || pesquisaGR.getValue('estado') !== 'ativa') {
+            gs.warn('BR_UMUX_Convite_CriarAssessment: Pesquisa não é UMUX ativa, ignorando');
+            return;
+        }
+
+        // Buscar o Metric Type UMUX
+        var metricTypeGR = new GlideRecord('asmt_metric_type');
+        metricTypeGR.addQuery('name', 'UMUX Survey');
+        metricTypeGR.query();
+
+        if (!metricTypeGR.next()) {
+            gs.error('BR_UMUX_Convite_CriarAssessment: UMUX Survey Metric Type não encontrado');
+            return;
+        }
+
+        var metricTypeId = metricTypeGR.getUniqueValue();
+        var userId = current.getValue('usuario');
+
+        gs.info('BR_UMUX_Convite_CriarAssessment: Criando Assessment Instance para convite ' +
+                current.getUniqueValue() + ' | Usuário: ' + userId);
+
+        // USAR API OFICIAL: AssessmentUtils.createAssessments()
+        // Retorna: "instanceId,groupId" ou apenas "instanceId"
+        var assessmentUtils = new global.AssessmentUtils();
+        var result = assessmentUtils.createAssessments(metricTypeId, '', userId);
+
+        if (!result) {
+            gs.error('BR_UMUX_Convite_CriarAssessment: AssessmentUtils retornou vazio');
+            return;
+        }
+
+        // Parse do resultado (formato: "instanceId,groupId" ou "instanceId")
+        var resultParts = result.split(',');
+        var assessmentId = resultParts[0];
+
+        if (!assessmentId) {
+            gs.error('BR_UMUX_Convite_CriarAssessment: Falha ao extrair instanceId do resultado: ' + result);
+            return;
+        }
+
+        gs.info('BR_UMUX_Convite_CriarAssessment: Assessment Instance criado: ' + assessmentId);
+
+        // Atualizar o Assessment Instance com rastreabilidade e estado
+        var assessmentGR = new GlideRecord('asmt_assessment_instance');
+        if (assessmentGR.get(assessmentId)) {
+            // Rastreabilidade
+            assessmentGR.setValue('source_table', current.getTableName());
+            assessmentGR.setValue('source_id', current.getUniqueValue());
+            assessmentGR.setValue('trigger_id', current.getUniqueValue());
+            assessmentGR.setValue('trigger_table', current.getTableName());
+
+            // IMPORTANTE: Forçar estado para 'wip' (Work In Progress)
+            // Isso impede que o ServiceNow complete automaticamente
+            assessmentGR.setValue('state', 'wip');
+
+            assessmentGR.setWorkflow(false); // Evitar disparar outras BRs
+            assessmentGR.update();
+
+            gs.info('BR_UMUX_Convite_CriarAssessment: Assessment atualizado com rastreabilidade');
+        }
+
+        // Atualizar convite com referência ao Assessment
+        current.setValue('assessment_instance', assessmentId);
+
+        // Só mudar estado se ainda estiver pendente
+        if (current.getValue('estado') === 'pendente') {
+            current.setValue('estado', 'enviado');
+            current.setValue('data_envio', new GlideDateTime());
+        }
+
+        current.setWorkflow(false); // Evitar recursão
+        current.update();
+
+        gs.info('BR_UMUX_Convite_CriarAssessment: Convite atualizado com Assessment Instance');
+
+    } catch (ex) {
+        gs.error('BR_UMUX_Convite_CriarAssessment: Exceção ao processar convite: ' + ex.message);
+        gs.error('Stack trace: ' + ex.stack);
+    }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 00:00:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>GENERATED_SYS_ID</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BR_UMUX_Convite_CriarAssessment</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="PM Product" source="x_snc_pmprod">x_snc_pmprod</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PM Product">x_snc_pmprod</sys_scope>
+        <sys_update_name>sys_script_BR_UMUX_Convite_CriarAssessment</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 00:00:00</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+</record_update>
