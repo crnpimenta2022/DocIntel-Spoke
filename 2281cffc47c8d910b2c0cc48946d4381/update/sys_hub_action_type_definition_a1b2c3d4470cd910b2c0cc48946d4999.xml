@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build>glide-sandiego-12-22-2021__patch3-hotfix2-05-19-2022_05-20-2022_1555.zip</compiler_build>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Link Assessment Instance to Task</description>
+        <ih_action>false</ih_action>
+        <internal_name>link_assessment_instance_to_task</internal_name>
+        <label_cache/>
+        <master_snapshot/>
+        <name>Link Assessment Instance to Task</name>
+        <natlang/>
+        <outputs/>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 06:00:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a1b2c3d4470cd910b2c0cc48946d4999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Link Assessment Instance to Task</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DocIntel Flow Spoke" source="x_snc_di_spoke">2281cffc47c8d910b2c0cc48946d4381</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DocIntel Flow Spoke">2281cffc47c8d910b2c0cc48946d4381</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_a1b2c3d4470cd910b2c0cc48946d4999</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 06:00:00</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=a1b2c3d4470cd910b2c0cc48946d4999"/>
+    <sys_variable_value action="delete_multiple" query="document_key=a1b2c3d4470cd910b2c0cc48946d4999"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>a1b2c3d4470cd910b2c0cc48946d4999</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 06:00:00</sys_created_on>
+        <sys_id>a2b2c3d4470cd910b2c0cc48946d4999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 06:00:00</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">a3b2c3d4470cd910b2c0cc48946d4999</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>a1b2c3d4470cd910b2c0cc48946d4999</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 06:00:00</sys_created_on>
+        <sys_id>a4b2c3d4470cd910b2c0cc48946d4999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 06:00:00</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{},"complexObjectSchema":{"FlowDesigner:FDa1b2c3d4470cd910b2c0cc48946d4999":{},"FlowDesigner:FDa1b2c3d4470cd910b2c0cc48946d4999.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"a5b2c3d4-470c-d910-b2c0-cc48946d4999\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDa1b2c3d4470cd910b2c0cc48946d4999\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <variable display_value="Action Status">a6b2c3d4470cd910b2c0cc48946d4999</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=a1b2c3d4470cd910b2c0cc48946d4999"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>instance_id</field>
+        <id>a1b2c3d4470cd910b2c0cc48946d4999</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 06:00:00</sys_created_on>
+        <sys_id>a7b2c3d4470cd910b2c0cc48946d4999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 06:00:00</sys_updated_on>
+        <table>var__m_sys_hub_action_output_a1b2c3d4470cd910b2c0cc48946d4999</table>
+        <value>{{step[a8b2c3d4-470c-d910-b2c0-cc48946d4999].instance_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__action_status__</field>
+        <id>a1b2c3d4470cd910b2c0cc48946d4999</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 06:00:00</sys_created_on>
+        <sys_id>a9b2c3d4470cd910b2c0cc48946d4999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 06:00:00</sys_updated_on>
+        <table>var__m_sys_hub_action_output_a1b2c3d4470cd910b2c0cc48946d4999</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__dont_treat_as_error__</field>
+        <id>a1b2c3d4470cd910b2c0cc48946d4999</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 06:00:00</sys_created_on>
+        <sys_id>aab2c3d4470cd910b2c0cc48946d4999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 06:00:00</sys_updated_on>
+        <table>var__m_sys_hub_action_output_a1b2c3d4470cd910b2c0cc48946d4999</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <copied_from/>
+        <description/>
+        <messages/>
+        <name>Link Assessment Instance to Task</name>
+        <parent/>
+        <profile/>
+        <runnable_by_client_api>false</runnable_by_client_api>
+        <state>draft</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 06:00:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>abb2c3d4470cd910b2c0cc48946d4999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Link Assessment Instance to Task</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DocIntel Flow Spoke" source="x_snc_di_spoke">2281cffc47c8d910b2c0cc48946d4381</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DocIntel Flow Spoke">2281cffc47c8d910b2c0cc48946d4381</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 06:00:00</sys_updated_on>
+        <template>2281cffc47c8d910b2c0cc48946d4381</template>
+    </sys_hub_flow>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <action_type_definition>a1b2c3d4470cd910b2c0cc48946d4999</action_type_definition>
+        <default_value/>
+        <description/>
+        <hide_value>false</hide_value>
+        <internal_name>assessment_id</internal_name>
+        <label>Assessment ID</label>
+        <mandatory>true</mandatory>
+        <order>100</order>
+        <reference_name/>
+        <reference_qualifier/>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 06:00:00</sys_created_on>
+        <sys_id>acb2c3d4470cd910b2c0cc48946d4999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>assessment_id</sys_name>
+        <sys_package display_value="DocIntel Flow Spoke" source="x_snc_di_spoke">2281cffc47c8d910b2c0cc48946d4381</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DocIntel Flow Spoke">2281cffc47c8d910b2c0cc48946d4381</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 06:00:00</sys_updated_on>
+        <type>string</type>
+    </sys_hub_action_input>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <action_type_definition>a1b2c3d4470cd910b2c0cc48946d4999</action_type_definition>
+        <default_value/>
+        <description/>
+        <hide_value>false</hide_value>
+        <internal_name>user_id</internal_name>
+        <label>User ID</label>
+        <mandatory>true</mandatory>
+        <order>200</order>
+        <reference_name/>
+        <reference_qualifier/>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 06:00:00</sys_created_on>
+        <sys_id>adb2c3d4470cd910b2c0cc48946d4999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>user_id</sys_name>
+        <sys_package display_value="DocIntel Flow Spoke" source="x_snc_di_spoke">2281cffc47c8d910b2c0cc48946d4381</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DocIntel Flow Spoke">2281cffc47c8d910b2c0cc48946d4381</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 06:00:00</sys_updated_on>
+        <type>string</type>
+    </sys_hub_action_input>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <action_type_definition>a1b2c3d4470cd910b2c0cc48946d4999</action_type_definition>
+        <default_value/>
+        <description/>
+        <hide_value>false</hide_value>
+        <internal_name>task_sys_id</internal_name>
+        <label>Task Sys ID</label>
+        <mandatory>true</mandatory>
+        <order>300</order>
+        <reference_name/>
+        <reference_qualifier/>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 06:00:00</sys_created_on>
+        <sys_id>aeb2c3d4470cd910b2c0cc48946d4999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>task_sys_id</sys_name>
+        <sys_package display_value="DocIntel Flow Spoke" source="x_snc_di_spoke">2281cffc47c8d910b2c0cc48946d4381</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DocIntel Flow Spoke">2281cffc47c8d910b2c0cc48946d4381</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 06:00:00</sys_updated_on>
+        <type>string</type>
+    </sys_hub_action_input>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <action_type_definition>a1b2c3d4470cd910b2c0cc48946d4999</action_type_definition>
+        <default_value/>
+        <description/>
+        <hide_value>false</hide_value>
+        <internal_name>task_table_name</internal_name>
+        <label>Task Table Name</label>
+        <mandatory>true</mandatory>
+        <order>400</order>
+        <reference_name/>
+        <reference_qualifier/>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 06:00:00</sys_created_on>
+        <sys_id>afb2c3d4470cd910b2c0cc48946d4999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>task_table_name</sys_name>
+        <sys_package display_value="DocIntel Flow Spoke" source="x_snc_di_spoke">2281cffc47c8d910b2c0cc48946d4381</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DocIntel Flow Spoke">2281cffc47c8d910b2c0cc48946d4381</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 06:00:00</sys_updated_on>
+        <type>string</type>
+    </sys_hub_action_input>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <action_type_definition>a1b2c3d4470cd910b2c0cc48946d4999</action_type_definition>
+        <default_value/>
+        <description/>
+        <internal_name>instance_id</internal_name>
+        <label>Instance ID</label>
+        <mandatory>false</mandatory>
+        <order>100</order>
+        <reference_name/>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 06:00:00</sys_created_on>
+        <sys_id>b0b2c3d4470cd910b2c0cc48946d4999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>instance_id</sys_name>
+        <sys_package display_value="DocIntel Flow Spoke" source="x_snc_di_spoke">2281cffc47c8d910b2c0cc48946d4381</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DocIntel Flow Spoke">2281cffc47c8d910b2c0cc48946d4381</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 06:00:00</sys_updated_on>
+        <type>string</type>
+    </sys_hub_action_output>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <created_from/>
+        <description/>
+        <flow>abb2c3d4470cd910b2c0cc48946d4999</flow>
+        <input_variables/>
+        <instance_order>0</instance_order>
+        <label>Script step</label>
+        <name>Script step</name>
+        <output_variables/>
+        <parent_step/>
+        <step_type>sys_hub_step_type_script</step_type>
+        <subflow_inputs/>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 06:00:00</sys_created_on>
+        <sys_id>b1b2c3d4470cd910b2c0cc48946d4999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Script step</sys_name>
+        <sys_package display_value="DocIntel Flow Spoke" source="x_snc_di_spoke">2281cffc47c8d910b2c0cc48946d4381</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DocIntel Flow Spoke">2281cffc47c8d910b2c0cc48946d4381</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 06:00:00</sys_updated_on>
+        <uuid>a8b2c3d4-470c-d910-b2c0-cc48946d4999</uuid>
+    </sys_hub_step_instance>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>b1b2c3d4470cd910b2c0cc48946d4999</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 06:00:00</sys_created_on>
+        <sys_id>b2b2c3d4470cd910b2c0cc48946d4999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 06:00:00</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+    try {
+        // Get input parameters
+        var assessmentId = inputs.assessment_id;
+        var userId = inputs.user_id;
+        var taskSysId = inputs.task_sys_id;
+        var taskTableName = inputs.task_table_name;
+
+        // Create the assessment instance using AssessmentUtils
+        var result = new global.AssessmentUtils().createAssessments(assessmentId, '', userId);
+
+        // Parse the result to get the instance ID
+        // The result format is: "instanceId,groupId" or just "instanceId"
+        result = result.split(',');
+        var instanceId = result[0];
+
+        // Get the assessment instance record
+        var grInstance = new GlideRecord('asmt_assessment_instance');
+        if (grInstance.get(instanceId)) {
+            // Link the assessment instance to the task
+            grInstance.setValue('task_id', taskSysId);
+            grInstance.setValue('trigger_id', taskSysId);
+            grInstance.setValue('trigger_table', taskTableName);
+            grInstance.update();
+
+            // Set output
+            outputs.instance_id = instanceId;
+
+            gs.info('Successfully linked assessment instance ' + instanceId + ' to task ' + taskSysId);
+        } else {
+            gs.error('Failed to retrieve assessment instance with ID: ' + instanceId);
+            outputs.instance_id = '';
+        }
+    } catch (e) {
+        gs.error('Error linking assessment instance to task: ' + e.message);
+        outputs.instance_id = '';
+    }
+})(inputs, outputs);</value>
+        <variable display_value="Script">b3b2c3d4470cd910b2c0cc48946d4999</variable>
+    </sys_variable_value>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <default_value/>
+        <internal_name>instance_id</internal_name>
+        <label>Instance ID</label>
+        <mandatory>false</mandatory>
+        <order>100</order>
+        <step_instance>b1b2c3d4470cd910b2c0cc48946d4999</step_instance>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 06:00:00</sys_created_on>
+        <sys_id>b4b2c3d4470cd910b2c0cc48946d4999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>instance_id</sys_name>
+        <sys_package display_value="DocIntel Flow Spoke" source="x_snc_di_spoke">2281cffc47c8d910b2c0cc48946d4381</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DocIntel Flow Spoke">2281cffc47c8d910b2c0cc48946d4381</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 06:00:00</sys_updated_on>
+        <type>string</type>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <default_value/>
+        <internal_name>assessment_id</internal_name>
+        <label>Assessment ID</label>
+        <mandatory>true</mandatory>
+        <order>100</order>
+        <step_instance>b1b2c3d4470cd910b2c0cc48946d4999</step_instance>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 06:00:00</sys_created_on>
+        <sys_id>b5b2c3d4470cd910b2c0cc48946d4999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>assessment_id</sys_name>
+        <sys_package display_value="DocIntel Flow Spoke" source="x_snc_di_spoke">2281cffc47c8d910b2c0cc48946d4381</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DocIntel Flow Spoke">2281cffc47c8d910b2c0cc48946d4381</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 06:00:00</sys_updated_on>
+        <type>string</type>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <default_value/>
+        <internal_name>user_id</internal_name>
+        <label>User ID</label>
+        <mandatory>true</mandatory>
+        <order>200</order>
+        <step_instance>b1b2c3d4470cd910b2c0cc48946d4999</step_instance>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 06:00:00</sys_created_on>
+        <sys_id>b6b2c3d4470cd910b2c0cc48946d4999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>user_id</sys_name>
+        <sys_package display_value="DocIntel Flow Spoke" source="x_snc_di_spoke">2281cffc47c8d910b2c0cc48946d4381</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DocIntel Flow Spoke">2281cffc47c8d910b2c0cc48946d4381</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 06:00:00</sys_updated_on>
+        <type>string</type>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <default_value/>
+        <internal_name>task_sys_id</internal_name>
+        <label>Task Sys ID</label>
+        <mandatory>true</mandatory>
+        <order>300</order>
+        <step_instance>b1b2c3d4470cd910b2c0cc48946d4999</step_instance>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 06:00:00</sys_created_on>
+        <sys_id>b7b2c3d4470cd910b2c0cc48946d4999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>task_sys_id</sys_name>
+        <sys_package display_value="DocIntel Flow Spoke" source="x_snc_di_spoke">2281cffc47c8d910b2c0cc48946d4381</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DocIntel Flow Spoke">2281cffc47c8d910b2c0cc48946d4381</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 06:00:00</sys_updated_on>
+        <type>string</type>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <default_value/>
+        <internal_name>task_table_name</internal_name>
+        <label>Task Table Name</label>
+        <mandatory>true</mandatory>
+        <order>400</order>
+        <step_instance>b1b2c3d4470cd910b2c0cc48946d4999</step_instance>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 06:00:00</sys_created_on>
+        <sys_id>b8b2c3d4470cd910b2c0cc48946d4999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>task_table_name</sys_name>
+        <sys_package display_value="DocIntel Flow Spoke" source="x_snc_di_spoke">2281cffc47c8d910b2c0cc48946d4999</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DocIntel Flow Spoke">2281cffc47c8d910b2c0cc48946d4381</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 06:00:00</sys_updated_on>
+        <type>string</type>
+    </sys_hub_step_ext_input>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>assessment_id</field>
+        <id>b1b2c3d4470cd910b2c0cc48946d4999</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 06:00:00</sys_created_on>
+        <sys_id>b9b2c3d4470cd910b2c0cc48946d4999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 06:00:00</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_b1b2c3d4470cd910b2c0cc48946d4999</table>
+        <value>{{action.assessment_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>user_id</field>
+        <id>b1b2c3d4470cd910b2c0cc48946d4999</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 06:00:00</sys_created_on>
+        <sys_id>bab2c3d4470cd910b2c0cc48946d4999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 06:00:00</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_b1b2c3d4470cd910b2c0cc48946d4999</table>
+        <value>{{action.user_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>task_sys_id</field>
+        <id>b1b2c3d4470cd910b2c0cc48946d4999</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 06:00:00</sys_created_on>
+        <sys_id>bbb2c3d4470cd910b2c0cc48946d4999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 06:00:00</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_b1b2c3d4470cd910b2c0cc48946d4999</table>
+        <value>{{action.task_sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>task_table_name</field>
+        <id>b1b2c3d4470cd910b2c0cc48946d4999</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 06:00:00</sys_created_on>
+        <sys_id>bcb2c3d4470cd910b2c0cc48946d4999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 06:00:00</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_b1b2c3d4470cd910b2c0cc48946d4999</table>
+        <value>{{action.task_table_name}}</value>
+    </sys_element_mapping>
+</record_update>
